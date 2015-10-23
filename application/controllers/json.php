@@ -183,7 +183,7 @@ class Json extends CI_Controller
         $this->load->view('json', $data);
     }
 
-    public function getAllCompetitionDetail()
+    public function getCompetitionDetail()
     {
         $compitition = $this->input->get('compitition');
         $user = $this->input->get('user');
@@ -203,7 +203,7 @@ class Json extends CI_Controller
         $score = intval($this->input->get('score'));
         $comment = $this->input->get('comment');
         $user = $this->input->get('user');
-        if($score<10 && $score > 0)
+        if($score<=10 && $score > 0)
         {
           $data['message'] = $this->restapi_model->postScore($participant, $score, $comment, $user);
         }

@@ -66,7 +66,7 @@ class restapi_model extends CI_Model
                 }
             } elseif ($compi->detail->status == '3') {
 
-                $query2 = $this->db->query("SELECT `parti`.`id`,`parti`.`name`,AVG(`score`) as `score` FROM `competo_competitionscore` as `score` INNER JOIN `competo_competitionparticipant` as `parti` ON `score`.`competitionparticipant` = `parti`.`id` WHERE `parti`.`id`='$competition' GROUP BY `score`.`competitionparticipant` ");
+                $query2 = $this->db->query("SELECT `parti`.`id`,`parti`.`name`,AVG(`score`) as `score` FROM `competo_competitionscore` as `score` INNER JOIN `competo_competitionparticipant` as `parti` ON `score`.`competitionparticipant` = `parti`.`id` GROUP BY `score`.`competitionparticipant` ");
 
                 if ($query2->num_rows() > 0) {
                     $compi->participant = $query2->result();

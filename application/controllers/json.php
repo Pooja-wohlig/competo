@@ -14,28 +14,28 @@ class Json extends CI_Controller
         $elements[0]->header = 'ID';
         $elements[0]->alias = 'id';
 
-        $elements = array();
+
         $elements[1] = new stdClass();
         $elements[1]->field = '`competo_competition`.`status`';
         $elements[1]->sort = '1';
         $elements[1]->header = 'Status';
         $elements[1]->alias = 'status';
 
-        $elements = array();
+
         $elements[2] = new stdClass();
         $elements[2]->field = '`competo_competition`.`name`';
         $elements[2]->sort = '1';
         $elements[2]->header = 'Name';
         $elements[2]->alias = 'name';
 
-        $elements = array();
+
         $elements[3] = new stdClass();
         $elements[3]->field = '`competo_competition`.`timestamp`';
         $elements[3]->sort = '1';
         $elements[3]->header = 'Timestamp';
         $elements[3]->alias = 'timestamp';
 
-        $elements = array();
+
         $elements[4] = new stdClass();
         $elements[4]->field = '`competo_competition`.`date`';
         $elements[4]->sort = '1';
